@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #c4e4e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: #ffffff;
+  width: 49vh;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.display {
+  margin-bottom: 1.5rem;
+  height: 9vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+
+  & .result {
+    color: #00474b;
+    font-size: 1.4rem;
+  }
+
+  & .copy-password {
+    position: relative;
+  }
+
+  & .copied {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #176d71;
+    color: #fff;
+    padding: 0.4rem;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  & .fa-copy {
+    color: #00474b;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  & .copied.visible {
+    opacity: 1 !important;
+  }
+}
+
+.container {
+  overflow: hidden;
+  height: 55vh;
+  padding: 1rem;
+
+  & .length {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  & .length-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #011a1c;
+    margin-bottom: 1rem;
+
+    & .rangeValue {
+      color: #00474b;
+      font-size: 1.5rem;
+    }
+  }
+
+  & .rangeInput {
+    width: 100%;
+  }
+}
+
+form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  & .include {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  & label {
+    color: #00474b;
+  }
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #02282a;
+  border-radius: 3px;
+  outline: none;
+  transition: background 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00474b;
+}
+
+/* Style for checked state */
+input[type="checkbox"]:checked {
+  /* background-color: #3caea3;  */
+  border-color: #3caea3;
+}
+
+/* Password Strength Indicator Color */
+
+.strength {
+  background-color: #c2cfd0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+
+  & p {
+    color: #032527;
+  }
+
+  & .indicator {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  & .show-indicator {
+    border: solid 1px #fffdfd;
+    height: 16px;
+    width: 8px;
+  }
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.orange {
+  background-color: #ffa500;
+}
+
+.yellow {
+  background-color: #ffff00;
+}
+
+.green {
+  background-color: #008000;
+}
+
+.generate {
+  width: 100%;
+  color: #eae4e4;
+  background-color: #00474b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}

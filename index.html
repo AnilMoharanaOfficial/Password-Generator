@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+  </head>
+  <body>
+    <!-- Display -->
+    <div class="display box">
+      <span class="result">Let's Generate....</span>
+      <div class="copy-password">
+        <div class="copied">Copied</div>
+        <i class="fa-regular fa-copy"></i>
+      </div>
+    </div>
+
+    <div class="container box">
+      <div class="length">
+        <div class="length-result">
+          <p>Character Length</p>
+          <span class="rangeValue">0</span>
+        </div>
+        <div class="select-length">
+          <input type="range" min="0" max="10" value="5" class="rangeInput" />
+        </div>
+      </div>
+      <!-- CHECKBOX -->
+      <form>
+        <div class="include">
+          <input type="checkbox" class="check-box" value="Uppercase" />
+          <label for="checkbox">Include Uppercase Letter</label>
+        </div>
+        <div class="include">
+          <input type="checkbox" class="check-box" value="Lowercase" />
+          <label for="checkbox">Include Lowercase Letter</label>
+        </div>
+        <div class="include">
+          <input type="checkbox" class="check-box" value="Numbers" />
+          <label for="checkbox">Include Numbers</label>
+        </div>
+        <div class="include">
+          <input type="checkbox" class="check-box" value="Symbols" />
+          <label for="checkbox">Include Symbols</label>
+        </div>
+      </form>
+
+      <!-- Password Strength Indicator -->
+      <div class="strength">
+        <p>STRENGTH</p>
+        <div class="indicator">
+          <div class="show-indicator indicator_1"></div>
+          <div class="show-indicator indicator_2"></div>
+          <div class="show-indicator indicator_3"></div>
+          <div class="show-indicator indicator_4"></div>
+        </div>
+      </div>
+      <!-- GENERATE BUTTON -->
+      <div class="generate">
+        GENERATE <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
+    <!-- SCRIPT -->
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b90bc8d1f6.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
