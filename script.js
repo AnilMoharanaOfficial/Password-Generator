@@ -1,6 +1,5 @@
 const displayPassword = document.querySelector(".result");
 const passwordText = document.querySelector(".result").innerText;
-const textarea = document.createElement("textarea");
 const copyButton = document.querySelector(".copy-password");
 const copyStatus = document.querySelector(".copied");
 const rangeInput = document.querySelector(".rangeInput");
@@ -201,6 +200,7 @@ generateButton.addEventListener("click", () => {
   if (checkBoxValue.length > 0) {
     password = "";
     generatedPassword();
+    console.log(`Password ${password}`);
     displayPassword.innerText = password;
   } else {
     alert("Please Select Password Type..");
@@ -210,6 +210,8 @@ generateButton.addEventListener("click", () => {
 // Copy button
 copyButton.addEventListener("click", () => {
   if (password.length > 0) {
+    const passwordText = displayPassword.innerText;
+    const textarea = document.createElement("textarea");
     textarea.value = passwordText;
     document.body.appendChild(textarea);
     textarea.select();
@@ -222,5 +224,7 @@ copyButton.addEventListener("click", () => {
     setTimeout(() => {
       copyStatus.classList.remove("visible");
     }, 1000);
+  } else {
+    alert("No password generated. Click 'Generate' to create a password.");
   }
 });

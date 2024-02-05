@@ -1,11 +1,49 @@
 @media screen and (max-width: 480px) {
+  .box {
+    background-color: #ffffff;
+    width: 45vh;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+
   .display {
+    margin-bottom: 1.5rem;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+
     & .result {
-      font-size: 1rem;
+      color: #00474b;
+      font-size: 1.4rem;
+    }
+
+    & .copy-password {
+      position: relative;
+    }
+
+    & .copied {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #176d71;
+      color: #fff;
+      padding: 0.4rem;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
     }
 
     & .fa-copy {
-      font-size: 1.2rem;
+      color: #00474b;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    & .copied.visible {
+      opacity: 1 !important;
     }
   }
 
